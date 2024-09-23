@@ -1,4 +1,4 @@
-
+import { puppyList } from "./data.js"
 
 function App() {
   
