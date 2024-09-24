@@ -1,5 +1,6 @@
 import { puppyList } from "./data.js";
 import { useState } from "react";
+import "./App.css"
 
 function App() {
   const [puppies, setPuppies] = useState(puppyList);
@@ -11,11 +12,13 @@ function App() {
   return (
     <>
       <div className="App">
+        <div className="puppies">
         {
           puppies.map((puppy) => {
             return <p onClick={() => {setFeatPupId(puppy.id)}} key={puppy.id}>{puppy.name}</p>
           })
-        }
+          }
+          </div>
         {featPupId && (
           <div>
             <h2>{featuredPup.name}</h2>
